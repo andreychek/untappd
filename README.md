@@ -76,7 +76,7 @@ Responses are a multi-dimensional hashref, as provided by Untappd.com.
             client_id     => MY_CLIENT_ID,
             client_secret => MY_CLIENT_SECRET
         });
-        print $untappd->oath_authenticate();
+        print $untappd->oath_authenticate("http://redirect.url.tld");
 
     Then, take the URL output above, paste it into your browser, login to Untappd, and when your browser
     redirects, note the `access_token` parameter in the URL string.
@@ -543,11 +543,19 @@ Perform a checkin
         rating     => 5,
     });
 
+# SOURCE REPOSITORY
+
+The current source for this module is available here:
+
+[https://github.com/andreychek/untappd](https://github.com/andreychek/untappd)
+
 # UNTAPPD
 
 Untappd for Perl is not endorsed by or affiliated with Untappd.com.
 
 Untappd.com and it's content are Copyright 10/18/10 Untappd. All Rights Reserved.
+
+The descriptions of the above methods is taken from the Untappd.com API documentation.
 
 Please be sure that your applications are in accordance with the Untappd.com Terms of Use:
 
