@@ -49,7 +49,7 @@ Responses are a multi-dimensional hashref, as provided by Untappd.com.
 
 =cut
 
-$Untappd::VERSION="0.05";
+$Untappd::VERSION="0.10";
 
 use LWP::UserAgent;
 use JSON;
@@ -80,7 +80,7 @@ Obtains OAuth authentication URL.
 
 Application authentication with Untappd is handled via OAuth.
 
-In order for most of these functions to work, you need to go login to Untappd via the OAuth URL
+In order for most of these functions to work, you need to login to Untappd via the OAuth URL
 returned by this function.  After authenticating, you will be redirected to the redirect_url you
 provide.
 
@@ -124,7 +124,7 @@ sub oath_authenticate {
     my $client_id     = $self->{client_id};
     my $client_secret = $self->{client_secret};
 
-    return "https://untappd.com/oauth/authenticate/?client_id=$client_id&client_secret=$client_secret&&response_type=token&redirect_url=$redirect_url";
+    return "https://untappd.com/oauth/authenticate/?client_id=$client_id&client_secret=$client_secret&response_type=token&redirect_url=$redirect_url";
 }
 
 =pod
