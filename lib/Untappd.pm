@@ -766,7 +766,7 @@ sub checkin_addcomment {
     my ($self, $args) = @_;
 
     die "The checkin_id parameter is required" unless $args->{checkin_id};
-    die "The comment parameter is required" unless $args->{comment};
+    die "The comment parameter is required"    unless $args->{comment};
 
     return $self->_call_untappd("POST", "checkin/addcomment/$args->{checkin_id}", $args);
 }
@@ -1072,12 +1072,17 @@ sub _call_untappd {
         $response = LWP::UserAgent->new()->post( $uri, $args );
     }
 
-    unless ($response->is_success) {
-        die $response->status_line, $response->decoded_content;
-    }
-
     my $json    = $response->decoded_content;
     my $content = decode_json($json);
+
+    unless ($response->is_success) {
+        if ($content->{meta}{error_detail}) {
+            die $content->{meta}{error_detail};
+        }
+        else {
+            die "An unknown error has occurred when communicating with Untappd.com";
+        }
+    }
 
     $self->{notifications} = $content->{notifications};
     $self->{meta} = $content->{meta};
