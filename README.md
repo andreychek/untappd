@@ -51,7 +51,7 @@ Responses are a multi-dimensional hashref, as provided by Untappd.com.
 
     Application authentication with Untappd is handled via OAuth.
 
-    In order for most of these functions to work, you need to go login to Untappd via the OAuth URL
+    In order for most of these functions to work, you need to login to Untappd via the OAuth URL
     returned by this function.  After authenticating, you will be redirected to the redirect\_url you
     provide.
 
@@ -171,8 +171,7 @@ Responses are a multi-dimensional hashref, as provided by Untappd.com.
     `bid` (__required__) - The beer ID that you want to display checkins
 
     `min_id` (int, optional) - The numeric ID of the most recent check-in. This provided to you in the
-
-    `next_query` attribute.
+    next\_query attribute.
 
     `max_id` (int, optional) - The checkin ID that you want the results to start with
 
@@ -189,8 +188,7 @@ Responses are a multi-dimensional hashref, as provided by Untappd.com.
 
     `brewery_id` (__required__) - The Brewery ID that you want to display checkins
 
-    `min_id` (int, optional) - The numeric ID of the most recent check-in. New results will only be shown if
-     there are checkins before this ID
+    `min_id` (int, optional) - The numeric ID of the most recent check-in. New results will only be shown if there are checkins before this ID
 
     `max_id` (int, optional) - The checkin ID that you want the results to start with
 
@@ -243,8 +241,7 @@ Responses are a multi-dimensional hashref, as provided by Untappd.com.
 
     This method will return the user information for a selected user. If you want to obtain the
     authenticated user's information, you don't need to pass the "user" query string.
-    Please note: The settings attribute will only be visible if the user that you are making the call on is
-    authenticated. Unauthenticated calls do not return this attribtue.
+    Please note: The settings attribute will only be visible if the user that you are making the call on is authenticated. Unauthenticated calls do not return this attribtue.
 
     __Params__
 
@@ -260,6 +257,7 @@ Responses are a multi-dimensional hashref, as provided by Untappd.com.
     __Params__
 
     `username` (__required__) - The Username that you want to display information
+
     `offset` (int, optional) - The numeric offset that you what results to start
 
     [https://untappd.com/api/docs/v4\#badges](https://untappd.com/api/docs/v4\#badges)
@@ -337,9 +335,7 @@ Responses are a multi-dimensional hashref, as provided by Untappd.com.
 
     `q` (__required__) - The search term that you want to search.
 
-    `sort` (optional): `count` or `name` (default) - This can let you choose if you want the results to be
-    returned in Alphabetical order (name) or by checkin count (count). By default the search returns all
-    values in Alphabetical order.
+    `sort` (optional): `count` or `name` (default) - This can let you choose if you want the results to be returned in Alphabetical order (name) or by checkin count (count). By default the search returns all values in Alphabetical order.
 
     [https://untappd.com/api/docs/v4\#beer\_search](https://untappd.com/api/docs/v4\#beer\_search)
 
@@ -361,8 +357,7 @@ Responses are a multi-dimensional hashref, as provided by Untappd.com.
 
     `bid` (__required__) - The numeric Beer ID you want to check into.
 
-    `foursquare_id` (optional) - The MD5 hash ID of the Venue you want to attach the beer checkin. This HAS TO
-    BE the MD5 non-numeric hash from the foursquare v2.
+    `foursquare_id` (optional) - The MD5 hash ID of the Venue you want to attach the beer checkin. This HAS TO BE the MD5 non-numeric hash from the foursquare v2.
 
     `geolat` (optional) - The numeric Latitude of the user. This is required if you add a location.
 
@@ -370,8 +365,7 @@ Responses are a multi-dimensional hashref, as provided by Untappd.com.
 
     `shout` (optional) - The text you would like to include as a comment of the checkin. Max of 140 characters.
 
-    `rating` (optional) - The rating score you would like to add for the beer. This can only be 1 to 5 and
-    whole numbers (no 4.2)
+    `rating` (optional) - The rating score you would like to add for the beer. This can only be 1 to 5 and whole numbers (no 4.2)
 
     `facebook` (optional) - Default = "off", Pass "on" to post to facebook
 
