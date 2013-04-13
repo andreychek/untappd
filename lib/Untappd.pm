@@ -291,8 +291,7 @@ B<Params>
 C<bid> (B<required>) - The beer ID that you want to display checkins
 
 C<min_id> (int, optional) - The numeric ID of the most recent check-in. This provided to you in the
-
-C<next_query> attribute.
+next_query attribute.
 
 C<max_id> (int, optional) - The checkin ID that you want the results to start with
 
@@ -325,8 +324,7 @@ B<Params>
 
 C<brewery_id> (B<required>) - The Brewery ID that you want to display checkins
 
-C<min_id> (int, optional) - The numeric ID of the most recent check-in. New results will only be shown if
- there are checkins before this ID
+C<min_id> (int, optional) - The numeric ID of the most recent check-in. New results will only be shown if there are checkins before this ID
 
 C<max_id> (int, optional) - The checkin ID that you want the results to start with
 
@@ -459,8 +457,7 @@ sub checkin_view {
 
 This method will return the user information for a selected user. If you want to obtain the
 authenticated user's information, you don't need to pass the "user" query string.
-Please note: The settings attribute will only be visible if the user that you are making the call on is
-authenticated. Unauthenticated calls do not return this attribtue.
+Please note: The settings attribute will only be visible if the user that you are making the call on is authenticated. Unauthenticated calls do not return this attribtue.
 
 B<Params>
 
@@ -492,6 +489,7 @@ authenticated user's information, you don't need to pass the "USERNAME" paramete
 B<Params>
 
 C<username> (B<required>) - The Username that you want to display information
+
 C<offset> (int, optional) - The numeric offset that you what results to start
 
 L<https://untappd.com/api/docs/v4#badges>
@@ -653,9 +651,7 @@ B<Params>
 
 C<q> (B<required>) - The search term that you want to search.
 
-C<sort> (optional): C<count> or C<name> (default) - This can let you choose if you want the results to be
-returned in Alphabetical order (name) or by checkin count (count). By default the search returns all
-values in Alphabetical order.
+C<sort> (optional): C<count> or C<name> (default) - This can let you choose if you want the results to be returned in Alphabetical order (name) or by checkin count (count). By default the search returns all values in Alphabetical order.
 
 L<https://untappd.com/api/docs/v4#beer_search>
 
@@ -707,8 +703,7 @@ C<timezone> (B<required>) - The timezone of the user, such as EST or PST.
 
 C<bid> (B<required>) - The numeric Beer ID you want to check into.
 
-C<foursquare_id> (optional) - The MD5 hash ID of the Venue you want to attach the beer checkin. This HAS TO
-BE the MD5 non-numeric hash from the foursquare v2.
+C<foursquare_id> (optional) - The MD5 hash ID of the Venue you want to attach the beer checkin. This HAS TO BE the MD5 non-numeric hash from the foursquare v2.
 
 C<geolat> (optional) - The numeric Latitude of the user. This is required if you add a location.
 
@@ -716,8 +711,7 @@ C<geolng> (optional) - The numeric Longitude of the user. This is required if yo
 
 C<shout> (optional) - The text you would like to include as a comment of the checkin. Max of 140 characters.
 
-C<rating> (optional) - The rating score you would like to add for the beer. This can only be 1 to 5 and
-whole numbers (no 4.2)
+C<rating> (optional) - The rating score you would like to add for the beer. This can only be 1 to 5 and whole numbers (no 4.2)
 
 C<facebook> (optional) - Default = "off", Pass "on" to post to facebook
 
