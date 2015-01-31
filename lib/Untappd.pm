@@ -62,7 +62,7 @@ sub new {
         client_id     => $args->{client_id}     || "",
         client_secret => $args->{client_secret} || "",
         access_token  => $args->{access_token}  || "",
-        untappd_url   => "http://api.untappd.com/v4/",
+        untappd_url   => "https://api.untappd.com/v4/",
     };
 
     bless ($untappd, $class);
